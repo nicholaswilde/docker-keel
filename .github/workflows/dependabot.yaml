@@ -1,5 +1,7 @@
+---
 # Set update schedule for GitHub Actions
 
+name: dependabot
 version: 2
 updates:
 
