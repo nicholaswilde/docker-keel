@@ -77,9 +77,9 @@ jobs:
           build-args: |
             BUILD_DATE=2021-01-21T034412Z
           tags: |
-            nicholaswilde/template:latest
-            nicholaswilde/template:${{ github.event.inputs.version }}
-            ghcr.io/nicholaswilde/template:latest
-            ghcr.io/nicholaswilde/template:${{ github.event.inputs.version }}
-            quay.io/nicholaswilde/template:latest
-            quay.io/nicholaswilde/template:${{ github.event.inputs.version }}
+            nicholaswilde/keel:latest
+            nicholaswilde/keel:${{ github.event.inputs.version }}
+            ghcr.io/nicholaswilde/keel:latest
+            ghcr.io/nicholaswilde/keel:${{ github.event.inputs.version }}
+            quay.io/nicholaswilde/keel:latest
+            quay.io/nicholaswilde/keel:${{ github.event.inputs.version }}
