@@ -27,6 +27,10 @@ services:
     ports:
       - 9300:9300
     restart: unless-stopped
+    volumes:
+      - data:/data
+volumes:
+  data:
 ```
 ### docker cli
 ```bash

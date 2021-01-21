@@ -2,16 +2,16 @@
 version: "2.1"
 services:
   installer:
-    image: nicholaswilde/cryptpad:latest
-    container_name: cryptpad
+    image: nicholaswilde/keel:latest
+    container_name: keel
+    environment:
+      - TZ=America/Los_Angeles #optional
+      - PUID=1000   #optional
+      - PGID=1000   #optional
     ports:
-      - 3000:3000
+      - 9300:9300
     restart: unless-stopped
     volumes:
-      - app:/app
-      - config:/config
-      - defaults:/defaults
+      - data:/data
 volumes:
-  app:
-  config:
-  defaults:
+  data:
