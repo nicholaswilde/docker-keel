@@ -1,11 +1,11 @@
-# Docker Template
-[![Docker Image Version (latest by date)](https://img.shields.io/docker/v/nicholaswilde/template)](https://hub.docker.com/r/nicholaswilde/template)
-[![Docker Pulls](https://img.shields.io/docker/pulls/nicholaswilde/template)](https://hub.docker.com/r/nicholaswilde/template)
-[![GitHub](https://img.shields.io/github/license/nicholaswilde/docker-template)](./LICENSE)
-[![lint](https://github.com/nicholaswilde/docker-cryptpad/workflows/lint/badge.svg?branch=main)](https://github.com/nicholaswilde/docker-template/actions?query=workflow%3Alint)
+# Docker Keel
+[![Docker Image Version (latest by date)](https://img.shields.io/docker/v/nicholaswilde/keel)](https://hub.docker.com/r/nicholaswilde/keel)
+[![Docker Pulls](https://img.shields.io/docker/pulls/nicholaswilde/keel)](https://hub.docker.com/r/nicholaswilde/keel)
+[![GitHub](https://img.shields.io/github/license/nicholaswilde/docker-keel)](./LICENSE)
+[![lint](https://github.com/nicholaswilde/docker-keel/workflows/lint/badge.svg?branch=main)](https://github.com/nicholaswilde/docker-keel/actions?query=workflow%3Alint)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
-A template repo for Docker images.
+A multi-architecture image for [Keel](https://keel.sh/)
 
 ## Requirements
 - [buildx](https://docs.docker.com/engine/reference/commandline/buildx/)
@@ -16,27 +16,27 @@ A template repo for Docker images.
 ---
 version: "2.1"
 services:
-  cryptpad:
-    image: nicholaswilde/cryptpad
-    container_name: cryptpad
+  keel:
+    image: nicholaswilde/keel
+    container_name: keel
     environment:
       - TZ=America/Los_Angeles #optional
       - PUID=1000   #optional
       - PGID=1000   #optional
     ports:
-      - 3000:3000
+      - 9300:9300
     restart: unless-stopped
 ```
 ### docker cli
 ```bash
 $ docker run -d \
-  --name=cryptpad \
+  --name=keel \
   -e TZ=America/Los_Angeles `# optional` \
   -e PUID=1000  `# optional` \
   -e PGID=1000   `# optional` \
-  -p 3000:3000 \
+  -p 9300:9300 \
   --restart unless-stopped \
-  nicholaswilde/cryptpad
+  nicholaswilde/keel
 ```
 
 ## Build

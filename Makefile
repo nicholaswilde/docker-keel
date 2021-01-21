@@ -1,11 +1,12 @@
 include make.env
 
+BUILD_DATE ?= $(shell date -u +%Y-%m-%dT%H%M%SZ)
 NS ?= nicholaswilde
-VERSION ?= 0.1.0
+VERSION ?= 0.16.1
 LS ?= 1
 
-IMAGE_NAME ?= template
-CONTAINER_NAME ?= template
+IMAGE_NAME ?= keel
+CONTAINER_NAME ?= keel
 CONTAINER_INSTANCE ?= default
 
 .PHONY: push push-latest run rm help vars shell prune
@@ -62,7 +63,7 @@ rund:
 	docker run -d --rm --name $(CONTAINER_NAME)-$(CONTAINER_INSTANCE) $(PORTS) $(ENV) $(NS)/$(IMAGE_NAME):$(VERSION)-ls$(LS)
 
 shell:
-	docker run --rm $(PORTS) $(ENV) $(NS)/$(IMAGE_NAME):$(VERSION)-ls$(LS) /bin/bash
+	docker run --rm $(PORTS) $(ENV) $(NS)/$(IMAGE_NAME):$(VERSION)-ls$(LS) /bin/sh
 
 ## stop   	: Stop the Docker container
 stop:
