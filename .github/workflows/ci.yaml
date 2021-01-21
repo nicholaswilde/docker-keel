@@ -74,6 +74,8 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm/v7,linux/arm64
           push: true
+          build-args: |
+            BUILD_DATE=2021-01-21T034412Z
           tags: |
             nicholaswilde/template:latest
             nicholaswilde/template:${{ github.event.inputs.version }}
