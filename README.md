@@ -2,6 +2,7 @@
 [![Docker Image Version (latest by date)](https://img.shields.io/docker/v/nicholaswilde/keel)](https://hub.docker.com/r/nicholaswilde/keel)
 [![Docker Pulls](https://img.shields.io/docker/pulls/nicholaswilde/keel)](https://hub.docker.com/r/nicholaswilde/keel)
 [![GitHub](https://img.shields.io/github/license/nicholaswilde/docker-keel)](./LICENSE)
+[![ci](https://github.com/nicholaswilde/docker-keel/workflows/ci/badge.svg)](https://github.com/nicholaswilde/docker-keel/actions?query=workflow%3Aci)
 [![lint](https://github.com/nicholaswilde/docker-keel/workflows/lint/badge.svg?branch=main)](https://github.com/nicholaswilde/docker-keel/actions?query=workflow%3Alint)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
