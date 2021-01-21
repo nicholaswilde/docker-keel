@@ -29,7 +29,7 @@ RUN \
 
 #########################
 
-FROM node:10.23-alpine as ui
+FROM --platform=linux/amd64 node:10.23-alpine as ui
 WORKDIR /app
 COPY --from=base /go/src/github.com/keel-hq/keel/ui /app
 RUN \
